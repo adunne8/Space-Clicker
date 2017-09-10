@@ -1,0 +1,9 @@
+.button{
+  border: 0;
+  margin: 0
+  padding: 0;
+  background: red;
+}
+button#food1{
+  background: red;
+}
