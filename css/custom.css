@@ -1,0 +1,9 @@
+.resource_row{
+  padding: 5px;
+}
+
+.resource_label{
+  min-width: 100px;
+  display: inline-block;
+  padding: 0 5px;
+}
