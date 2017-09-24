@@ -7,6 +7,8 @@ var clickCount = 0;
 
 window.onload = function() {
 
+  consoleMessage();
+
 
   var foodButton = document.getElementById('food');
   var woodButton = document.getElementById('wood');
@@ -45,6 +47,10 @@ window.onload = function() {
       document.getElementById("food_count").innerHTML = food;
     }
 
+  }
+
+  function consoleMessage(){
+    console.log("Hello!");
   }
 
 };
