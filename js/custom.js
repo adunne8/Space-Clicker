@@ -71,11 +71,11 @@ window.onload = function() {
   function spawn(resource){
     clickCount++;
 
-    if(food >= 10){
+    if(food.total >= 10){
       window[resource]++;
       document.getElementById(resource + "_count").innerHTML = window[resource];
-      food = food -10;
-      document.getElementById("food_count").innerHTML = food;
+      food.total = food.total -10;
+      document.getElementById("food_count").innerHTML = food.total;
     }
 
   }
