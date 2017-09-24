@@ -1,13 +1,41 @@
-var food = 0;
-var wood = 0;
-var stone = 0;
+
+
+
+//DEBUG LOOP FUNCTION
+window.setInterval(myCallback, 1000);
+var i = 0;
+function myCallback(){
+
+  //console.log("log: " + i);
+  i++;
+}
+//INITIALIZE VARIABLES
+
+//RESOURCES
+var food = {
+	name:'food',
+	total:0,
+	increment:1
+};
+var wood = {
+  name: 'wood',
+  total: 0,
+  increment: 1
+};
+var stone = {
+  name: 'stone',
+  total: 0,
+  increment: 1
+};
 var worker = 0;
+
+
 
 var clickCount = 0;
 
 window.onload = function() {
 
-  consoleMessage();
+
 
 
   var foodButton = document.getElementById('food');
@@ -32,9 +60,12 @@ window.onload = function() {
 
   function increment(resource) {
     clickCount++;
+    console.log(resource);
+    var res = window[resource];
+    console.log(res.total);
 
-    window[resource]++;
-    document.getElementById(resource + "_count").innerHTML = window[resource];
+    res.total++;
+    document.getElementById(resource + "_count").innerHTML = res.total;
   }
 
   function spawn(resource){
@@ -49,8 +80,6 @@ window.onload = function() {
 
   }
 
-  function consoleMessage(){
-    console.log("Hello!");
-  }
+
 
 };
