@@ -37,6 +37,7 @@ window.onload = function() {
   function myCallback(){
     autoResourceGeneration();
     showValues();
+		showIncrements();
   };
 
   var foodButton = document.getElementById('food');
@@ -147,6 +148,9 @@ window.onload = function() {
     document.getElementById("farmer_count").innerHTML = population.farmer;
     document.getElementById("woodcutter_count").innerHTML = population.woodcutter;
     document.getElementById("stonecutter_count").innerHTML = population.stonecutter;
-  }
+  };
+	function showIncrements(){
+		document.getElementById("food_increment").innerHTML = food.increment;
+	}
 
 };
