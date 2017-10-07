@@ -6,7 +6,7 @@ window.setInterval(myCallback, 1000);
 var i = 0;
 function myCallback(){
 
-  //console.log("log: " + i);
+  console.log("log: " + i);
   i++;
 }
 //INITIALIZE VARIABLES
@@ -71,11 +71,19 @@ window.onload = function() {
   function spawn(resource){
     clickCount++;
 
+    //VALID WORKER GENERATION
     if(food.total >= 10){
+      //ITERATE AND DISPLAY VALUE
       window[resource]++;
       document.getElementById(resource + "_count").innerHTML = window[resource];
+      //REDUCE FOOD AND DISPLAY
       food.total = food.total -10;
       document.getElementById("food_count").innerHTML = food.total;
+      document.getElementById(resource + "_message").style.visibility = "hidden";
+    }
+    //INVALID WORKER GENERATION
+    else{
+      document.getElementById(resource + "_message").style.visibility = "visible";
     }
 
   }
