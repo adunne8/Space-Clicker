@@ -1,9 +1,3 @@
-
-
-
-//DEBUG LOOP FUNCTION
-
-
 //INITIALIZE VARIABLES
 
 //RESOURCES
@@ -32,7 +26,9 @@ var population = {
 };
 var clickCount = 0;
 
+
 window.onload = function() {
+	//CODE RUN EACH SECOND
   window.setInterval(myCallback, 1000);
   function myCallback(){
     autoResourceGeneration();
@@ -80,31 +76,30 @@ window.onload = function() {
     //console.log(res.total);
 
     res.total++;
-    document.getElementById(resource + "_count").innerHTML = res.total;
+    showValues();
   }
 
   function spawn(resource){
-    clickCount++;
 
     //VALID WORKER GENERATION
     if(food.total >= 10){
       //ITERATE AND DISPLAY VALUE
       population.total++;
       population.unemployed++;
-      food.increment = food.increment -.9;
+      food.increment--;
 
       //REDUCE FOOD AND DISPLAY
-      food.total = Math.floor((food.total -10)*10)/10;
+      food.total = food.total -10;
 
       document.getElementById(resource + "_message").style.visibility = "hidden";
     }
     //INVALID WORKER GENERATION
     else{
       document.getElementById(resource + "_message").style.visibility = "visible";
-    }
+    };
     showValues();
     showPopulation();
-
+		showIncrements();
   };
 
   function assignWorker(type){
@@ -113,7 +108,7 @@ window.onload = function() {
 
       if(type == "farmer"){
         population.farmer++;
-        food.increment++;
+        food.increment = food.increment + 1.2;
         document.getElementById("farmer_count").innerHTML = population.farmer;
       }
       else if(type == "woodcutter"){
@@ -129,19 +124,22 @@ window.onload = function() {
 
     };
     showPopulation();
-
   };
 
+	//TRIGGERED EACH SECOND
   function autoResourceGeneration(){
-    food.total = Math.round((food.total + food.increment)*10)/10;
+    food.total = food.total + food.increment;
     wood.total = wood.total + wood.increment;
     stone.total = stone.total + stone.increment;
   };
+
+	//SHOW RESOURCE TOTALS
   function showValues(){
-    document.getElementById("food_count").innerHTML = food.total;
-    document.getElementById("wood_count").innerHTML = wood.total;
-    document.getElementById("stone_count").innerHTML = stone.total;
+    document.getElementById("food_count").innerHTML = Math.floor(food.total * 10)/10;
+    document.getElementById("wood_count").innerHTML = Math.floor(wood.total * 10)/10;
+    document.getElementById("stone_count").innerHTML = Math.floor(stone.total * 10)/10;
   };
+	//SHOW POPULATION BREAKDOWNS
   function showPopulation(){
     document.getElementById("population_count").innerHTML = population.total;
     document.getElementById("unemployed_count").innerHTML = population.unemployed;
@@ -149,8 +147,37 @@ window.onload = function() {
     document.getElementById("woodcutter_count").innerHTML = population.woodcutter;
     document.getElementById("stonecutter_count").innerHTML = population.stonecutter;
   };
+	//SHOW AUTO INCREMENT VALUES
 	function showIncrements(){
-		document.getElementById("food_increment").innerHTML = food.increment;
+		//SET RESOURCE VARIABLES
+		var foodInc = document.getElementById("food_increment");
+		var woodInc = document.getElementById("wood_increment");
+		var stoneInc = document.getElementById("stone_increment");
+
+		//DISPLAY RESOURCE INCREMENTS
+		foodInc.innerHTML = Math.round(food.increment*100)/100;
+		woodInc.innerHTML = Math.round(wood.increment*100)/100;
+		stoneInc.innerHTML = Math.round(stone.increment*100)/100;
+
+		//SET COLOR IF NEGITIVE
+		if(food.increment < 0){
+			foodInc.classList.add("negativeInc");
+		}
+		else{
+			foodInc.classList.remove("negativeInc");
+		};
+		if(wood.increment < 0){
+			woodInc.classList.add("negativeInc");
+		}
+		else{
+			woodInc.classList.remove("negativeInc");
+		};
+		if(stone.increment < 0){
+			stoneInc.classList.add("negativeInc");
+		}
+		else{
+			stoneInc.classList.remove("negativeInc");
+		};
 	}
 
 };

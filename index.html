@@ -18,13 +18,13 @@
         <div class="resource_section">
           <h2>Resources</h2>
           <div class="resource_row">
-            <button id="food" class="button">+1</button><span class="resource_label">Food</span><span id="food_count" class="resource_count">0</span><span id="food_increment" class="increment_number"></span>
+            <button id="food" class="button">+1</button><span class="resource_label">Food</span><span id="food_count" class="resource_count">0</span><span id="food_increment" class="increment_label"></span>
           </div>
           <div class="resource_row">
-            <button id="wood" class="button">+1</button><span class="resource_label">Wood</span><span id="wood_count" class="resource_count">0</span>
+            <button id="wood" class="button">+1</button><span class="resource_label">Wood</span><span id="wood_count" class="resource_count">0</span><span id="wood_increment" class="increment_label"></span>
           </div>
           <div class="resource_row">
-            <button id="stone" class="button">+1</button><span class="resource_label">Stone</span><span id="stone_count" class="resource_count">0</span>
+            <button id="stone" class="button">+1</button><span class="resource_label">Stone</span><span id="stone_count" class="resource_count">0</span><span id="stone_increment" class="increment_label"></span>
           </div>
         </div>
       </div>
@@ -34,11 +34,18 @@
           <h2>Population</h2>
           <div class="resource_row">
 
-            <p id="population_message">Population </p>
-            <button id="population" class="button">+1</button><span class="resource_label">Population</span><span id="population_count" class="resource_count">0</span>
+            <p id="population_message" class="spawnerror">Population </p>
+
+
+            <p><span id="population_count" class="resource_count">0</span> Total Population</p>
+
+            <button id="population" class="button">+1</button>
+
+            <span class="resource_label">Generate Person</span>
 
             <p id="worker_message" class="spawnerror">Worker needs 10 food</p>
             <span class="resource_label">Unemployed</span><span id="unemployed_count" class="resource_count">0</span>
+
 
             <p id="farmer_message" class="spawnerror">Need a worker</p>
             <button id="farmer" class="button">+1</button><span class="resource_label">Farmer</span><span id="farmer_count" class="resource_count">0</span>

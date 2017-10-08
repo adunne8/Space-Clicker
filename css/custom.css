@@ -13,12 +13,22 @@ body{
 }
 
 .resource_label{
-  min-width: 100px;
+  min-width: 60px;
   display: inline-block;
   padding: 0 5px;
+  padding-right: 10px;
+}
+.resource_count{
+  padding-right: 20px;
 }
 .spawnerror{
   margin: 0;
   color: red;
   visibility: hidden;
+}
+.increment_label{
+  color: green;
+}
+.negativeInc{
+  color: red;
 }
