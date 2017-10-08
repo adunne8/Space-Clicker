@@ -32,34 +32,41 @@
 
         <div class="resource_section col_2">
           <h2>Population</h2>
+
+          <!-- CREATE A PERSON -->
           <div class="resource_row">
-
-            <p id="population_message" class="spawnerror">Population </p>
-
-
-            <p><span id="population_count" class="resource_count">0</span> Total Population</p>
-
-            <button id="population" class="button">+1</button>
-
-            <span class="resource_label">Generate Person</span>
-
-            <p id="worker_message" class="spawnerror">Worker needs 10 food</p>
-            <span class="resource_label">Unemployed</span><span id="unemployed_count" class="resource_count">0</span>
-
-
-            <p id="farmer_message" class="spawnerror">Need a worker</p>
-            <button id="farmer" class="button">+1</button><span class="resource_label">Farmer</span><span id="farmer_count" class="resource_count">0</span>
-
-            <p id="woodcutter_message" class="spawnerror">Need a worker</p>
-            <button id="woodcutter" class="button">+1</button><span class="resource_label">Woodcutter</span><span id="woodcutter_count" class="resource_count">0</span>
-
-            <p id="stonecutter_message" class="spawnerror">Need a worker</p>
-            <button id="stonecutter" class="button">+1</button><span class="resource_label">Stonecutter</span><span id="stonecutter_count" class="resource_count">0</span>
-
+            <button id="population" class="button">+1</button><span class="resource_label">Generate Person</span>
+            <p id="worker_message" class="spawnerror errormessage">Worker needs 10 food</p>
           </div>
+
+          <!-- SHOW UNEMPLOYED -->
+          <div class="resource_row">
+            <span class="resource_label">Population</span><span id="population_count" class="resource_count">0</span>
+            <span class="resource_label">Unemployed</span><span id="unemployed_count" class="resource_count">0</span>
+          </div>
+
+          <!-- GENERATE FARMER -->
+          <div class="resource_row">
+            <button id="farmer" class="button assignworker">+1</button><span class="resource_label">Farmer</span><span id="farmer_count" class="resource_count">0</span>
+            <p id="farmer_message" class="spawnerror errormessage">Need a worker</p>
+          </div>
+
+          <!-- GENERATE WOODCUTTER -->
+          <div class="resource_row">
+            <button id="woodcutter" class="button assignworker">+1</button><span class="resource_label">Woodcutter</span><span id="woodcutter_count" class="resource_count">0</span>
+            <p id="woodcutter_message" class="spawnerror errormessage">Need a worker</p>
+          </div>
+
+          <!-- GENERATE STONECUTTER -->
+          <div class="resource_row">
+            <button id="stonecutter" class="button assignworker">+1</button><span class="resource_label">Stonecutter</span><span id="stonecutter_count" class="resource_count">0</span>
+            <p id="stonecutter_message" class="spawnerror errormessage">Need a worker</p>
+          </div>
+
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 
