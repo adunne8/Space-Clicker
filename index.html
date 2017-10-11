@@ -1,8 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <!-- LANGUAGE TYPES
+  ------------------------------------------ >
+  <meta charset="utf-8">
 
+  <!-- PAGE INFO
+  ------------------------------------------ >
+  <title>Space Clicker</title>
+  <meta name="author" content="Andrew Dunne">
+  <meta name="description" content="The Space Clicker game - A browser based clicking and automation game">
+  <meta name="keywords" content="game, clicker, fun, simple, office, passive, automation">
+  <!-- TODO: ADD FAVICON -->
+  <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+
+
+  <!-- TODO: ADD CUSTOM IMAGE FOR SITE - LINKING ON FB ETC -->
+  <!--
+  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+  information about Open Web technologies including HTML, CSS, and APIs for both Web sites
+  and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
+  <meta property="og:title" content="Mozilla Developer Network">
+-->
+
+  <!-- LINKS
+  ------------------------------------------ >
   <link rel="stylesheet" type="text/css" href="css\modern.css">
   <link rel="stylesheet" type="text/css" href="css\custom.css">
   <link rel="stylesheet" type="text/css" href="css\responsive.css">
@@ -34,43 +58,43 @@
           <h2>Population</h2>
 
           <!-- CREATE A PERSON -->
-          <div class="resource_row">
-            <button id="population" class="button">+1</button><span class="resource_label">Generate Person</span>
-            <p id="worker_message" class="spawnerror errormessage">Worker needs 10 food</p>
-          </div>
-
-          <!-- SHOW UNEMPLOYED -->
-          <div class="resource_row">
-            <span class="resource_label">Population</span><span id="population_count" class="resource_count">0</span>
-            <span class="resource_label">Unemployed</span><span id="unemployed_count" class="resource_count">0</span>
-          </div>
-
-          <!-- GENERATE FARMER -->
-          <div class="resource_row">
-            <button id="farmer" class="button assignworker">+1</button><span class="resource_label">Farmer</span><span id="farmer_count" class="resource_count">0</span>
-            <p id="farmer_message" class="spawnerror errormessage">Need a worker</p>
-          </div>
-
-          <!-- GENERATE WOODCUTTER -->
-          <div class="resource_row">
-            <button id="woodcutter" class="button assignworker">+1</button><span class="resource_label">Woodcutter</span><span id="woodcutter_count" class="resource_count">0</span>
-            <p id="woodcutter_message" class="spawnerror errormessage">Need a worker</p>
-          </div>
-
-          <!-- GENERATE STONECUTTER -->
-          <div class="resource_row">
-            <button id="stonecutter" class="button assignworker">+1</button><span class="resource_label">Stonecutter</span><span id="stonecutter_count" class="resource_count">0</span>
-            <p id="stonecutter_message" class="spawnerror errormessage">Need a worker</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="resource_row">
+    <button id="population" class="button">+1</button><span class="resource_label">Generate Person</span>
+    <p id="worker_message" class="spawnerror errormessage">Worker needs 10 food</p>
   </div>
 
+  <!-- SHOW UNEMPLOYED -->
+  <div class="resource_row">
+    <span class="resource_label">Population</span><span id="population_count" class="resource_count">0</span>
+    <span class="resource_label">Unemployed</span><span id="unemployed_count" class="resource_count">0</span>
+  </div>
 
-</body>
+  <!-- GENERATE FARMER -->
+  <div class="resource_row">
+    <button id="farmer" class="button assignworker">+1</button><span class="resource_label">Farmer</span><span id="farmer_count" class="resource_count">0</span>
+    <p id="farmer_message" class="spawnerror errormessage">Need a worker</p>
+  </div>
+
+  <!-- GENERATE WOODCUTTER -->
+  <div class="resource_row">
+    <button id="woodcutter" class="button assignworker">+1</button><span class="resource_label">Woodcutter</span><span id="woodcutter_count" class="resource_count">0</span>
+    <p id="woodcutter_message" class="spawnerror errormessage">Need a worker</p>
+  </div>
+
+  <!-- GENERATE STONECUTTER -->
+  <div class="resource_row">
+    <button id="stonecutter" class="button assignworker">+1</button><span class="resource_label">Stonecutter</span><span id="stonecutter_count" class="resource_count">0</span>
+    <p id="stonecutter_message" class="spawnerror errormessage">Need a worker</p>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  </body>
 
 
 </head>
